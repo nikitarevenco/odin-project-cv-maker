@@ -1,17 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import CV from "./CV";
+import { initialInfo, initialSections } from "../data/initial-info";
 
-function App({ initialInfo }) {
-  const [basicInfo, setBasicInfo] = useState({
-    name: initialInfo.name,
-    location: initialInfo.location,
-    email: initialInfo.email,
-    phone: initialInfo.phone,
-  });
+function App() {
+  const [info, setInfo] = useState(initialInfo);
+  const [sections, setSections] = useState(initialSections);
   return (
     <>
-      <CV basicInformation={basicInfo}></CV>
+      <CV info={info} sections={sections}></CV>
     </>
   );
 }

@@ -1,8 +1,17 @@
-export default function CV({ basicInformation, sections }) {
+export default function CV({ info, sections }) {
   return (
     <>
-      <CVHeader information={basicInformation}></CVHeader>
+      <CVHeader info={info} />
       <CVBody sections={sections} />
     </>
   );
+}
+
+class someTestClass {
+  constructor(asdasd) {
+    this.asdsda = asdasd;
+  }
+  sayHi() {
+    console.log("hi");
+  }
 }
