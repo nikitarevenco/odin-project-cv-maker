@@ -6,7 +6,7 @@ export default function CVHeader({ information }) {
   const headerItems = Object.entries(information)
     .filter((entry) => entry[0] !== "name")
     .map((entry) => {
-      <CVHeaderItem type={entry[0]} text={entry[1]}></CVHeaderItem>;
+      <CVHeaderItem type={entry[0]} text={entry[1]} />;
     });
   return (
     <div>

@@ -11,6 +11,7 @@ class someTestClass {
   constructor(asdasd) {
     this.asdsda = asdasd;
   }
+
   sayHi() {
     console.log("hi");
   }
