@@ -1,0 +1,18 @@
+.CV {
+  background-color: white;
+  aspect-ratio: 9 / 16;
+}
+
+.CVBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.CVSection {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.CVSection > h1 {
+  grid-column: span 2;
+}

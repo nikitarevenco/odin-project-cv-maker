@@ -1,0 +1,23 @@
+.headerItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CVHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: cornflowerblue;
+}
+
+.CVHeaderItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.CVHeaderItems > p,
+.CVHeaderItems > svg,
+.CVHeader > h1 {
+  color: #fff;
+}
