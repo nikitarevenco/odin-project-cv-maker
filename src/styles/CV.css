@@ -16,4 +16,6 @@
 .CV {
   background-color: white;
   aspect-ratio: 9 / 16;
+  width: clamp(340px, 50%, 1000px);
+  margin-inline: auto;
 }

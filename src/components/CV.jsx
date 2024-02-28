@@ -1,22 +1,28 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import CVBody from "./CVBody";
 import CVHeader from "./CVHeader";
 import "../styles/CV.css";
 
 export default function CV({ info, sections }) {
-  const [cvWidth, setCvWidth] = useState();
-  document.body.style.setProperty("--cv-width", JSON.stringify(cvWidth));
   const reference = useRef(0);
 
   const resizeObserver = useRef(
     new ResizeObserver((entries) => {
-      setCvWidth(entries[0].contentRect.width);
+      const cvWidth = entries[0].contentRect.width;
+      document.body.style.setProperty(
+        "--cv-width",
+        `${JSON.stringify(cvWidth)}px`,
+      );
     }),
   );
 
   useEffect(() => {
     resizeObserver.current.observe(reference.current);
-    setCvWidth(reference.current.offsetWidth);
+    const cvWidth = reference.current.offsetWidth;
+    document.body.style.setProperty(
+      "--cv-width",
+      `${JSON.stringify(cvWidth)}px`,
+    );
   }, []);
 
   return (
