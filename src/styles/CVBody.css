@@ -1,0 +1,59 @@
+.CVBody {
+  color: black;
+  padding: calc(0.06 * var(--cv-width));
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: calc(0.02 * var(--cv-width));
+}
+
+.section-name {
+  font-size: calc(0.025 * var(--cv-width));
+  background-color: #eef1f3;
+  color: #0e374e;
+  padding: calc(0.01 * var(--cv-width));
+  display: grid;
+  place-content: center;
+  margin-bottom: calc(0.01 * var(--cv-width));
+}
+
+.experience:nth-child(1) .section-name {
+  margin-top: 0;
+}
+
+.section-content {
+  display: grid;
+  column-gap: calc(0.05 * var(--cv-width));
+  row-gap: calc(0.004 * var(--cv-width));
+  grid-template-columns: calc(0.2 * var(--cv-width)) 1fr;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas:
+  "period place"
+  "location footnote"
+  ". description"
+}
+
+.place {
+  grid-area: place;
+  font-weight: bold;
+}
+.description {
+  grid-area: description;
+}
+.period {
+  grid-area: period;
+}
+.location {
+  grid-area: location;
+}
+.footnote {
+  grid-area: footnote;
+  color: rgb(75, 75, 75);
+}
+
+.CVBody p {
+  font-size: calc(0.02 * var(--cv-width));
+  margin: 0;
+}
