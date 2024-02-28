@@ -1,17 +1,18 @@
-import { ReactComponent as Location } from "../assets/location.svg";
-import { ReactComponent as Mail } from "../assets/mail.svg";
-import { ReactComponent as Call } from "../assets/call.svg";
+import Location from "../assets/location.svg?react";
+import Mail from "../assets/mail.svg?react";
+import Call from "../assets/call.svg?react";
+import "../styles/CVHeader.css";
 
-export default function CVHeader({ information }) {
-  const headerItems = Object.entries(information)
-    .filter((entry) => entry[0] !== "name")
-    .map((entry) => {
-      <CVHeaderItem type={entry[0]} text={entry[1]} />;
-    });
+export default function CVHeader({ info }) {
+  const headerItems = Object.entries(info)
+    .filter(([key]) => key !== "name")
+    .map(([key, value]) => (
+      <CVHeaderItem key={value} type={key} text={value} />
+    ));
   return (
-    <div>
-      <h1>{information.name}</h1>
-      {headerItems}
+    <div className="CVHeader">
+      <h1>{info.name}</h1>
+      <section className="CVHeaderItems">{headerItems}</section>
     </div>
   );
 }
@@ -27,6 +28,9 @@ function CVHeaderItem({ type, text }) {
       break;
     case "phone":
       svgType = <Call />;
+      break;
+    default:
+      svgType = null;
       break;
   }
   return (

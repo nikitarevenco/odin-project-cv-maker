@@ -13,11 +13,30 @@
 
 .CVHeaderItems {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.CVHeaderItems > p,
-.CVHeaderItems > svg,
+.CVHeaderItems > div {
+  display: flex;
+  justify-content: center;
+  gap: 0.2em;
+  align-items: center;
+}
+
+.CVHeaderItems p {
+  display: inline-block;
+  font-size: calc(0.05 * var(--cv-width))
+}
+
+.CVHeaderItems svg {
+  fill: #fff;
+} 
+
+.CVHeaderItems p,
 .CVHeader > h1 {
   color: #fff;
+}
+
+.CVHeader > h1 {
+  text-align: center;
 }

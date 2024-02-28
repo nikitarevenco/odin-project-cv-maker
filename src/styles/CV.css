@@ -1,7 +1,3 @@
-.CV {
-  background-color: white;
-  aspect-ratio: 9 / 16;
-}
 
 .CVBody {
   display: flex;
@@ -15,4 +11,9 @@
 
 .CVSection > h1 {
   grid-column: span 2;
+}
+
+.CV {
+  background-color: white;
+  aspect-ratio: 9 / 16;
 }
