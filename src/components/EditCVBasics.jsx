@@ -12,5 +12,5 @@ export default function EditCVBasics({ info, setInfo }) {
       </section>
     );
   });
-  return <section className="basic-inputs">{inputs}</section>;
+  return <section className="inputs">{inputs}</section>;
 }
