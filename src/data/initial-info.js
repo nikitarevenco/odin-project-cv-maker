@@ -8,6 +8,7 @@ const initialInfo = {
 const initialSections = {
   Education: [
     {
+      id: crypto.randomUUID(),
       place: "London City University",
       description:
         "Engaged in comprehensive study with a focus on Economics, integrating both theoretical frameworks and practical applications.",
@@ -16,6 +17,7 @@ const initialSections = {
       footnote: "Pursuing Bachelor of Economics",
     },
     {
+      id: crypto.randomUUID(),
       place: "Cambridge Online Academy",
       description:
         "Completed an advanced course in Mathematical Foundations, covering topics from calculus to linear algebra, enhancing analytical skills and mathematical understanding.",
@@ -26,6 +28,7 @@ const initialSections = {
   ],
   "Professional Experience": [
     {
+      id: crypto.randomUUID(),
       place: "Brighton Teacher",
       description:
         "Educator in advanced physics and mathematics, specialising in quantum destabilisation and quark analysis. Responsible for curriculum development and implementing innovative teaching methods.",
@@ -34,6 +37,7 @@ const initialSections = {
       footnote: "Lead Educator in Quantum Physics",
     },
     {
+      id: crypto.randomUUID(),
       place: "Folkestone Driver",
       description:
         "Professional driver navigating through Folkestone, providing exceptional service and experiences. Enhanced local tourism by exploring and recommending unique destinations.",
@@ -42,6 +46,7 @@ const initialSections = {
       footnote: "Professional Driver",
     },
     {
+      id: crypto.randomUUID(),
       place: "Tech Innovate Ltd",
       description:
         "Software Developer Intern, contributing to front-end development projects using HTML, CSS, and JavaScript. Participated in agile development cycles, improving website functionality and user experience.",

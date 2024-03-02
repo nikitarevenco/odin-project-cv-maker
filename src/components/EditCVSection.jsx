@@ -5,7 +5,7 @@ export default function EditCVSection({
   setSections,
 }) {
   const currentSection = fullSections[sectionName][sectionIndexToEdit];
-  const inputs = Object.entries(currentSection).map(([field, value]) => {
+  const inputs = Object.entries(currentSection).filter(([field]) => field !== 'id').map(([field, value]) => {
     return (
       <section key={field}>
         <p className="input-description">Enter: {field}</p>

@@ -13,8 +13,9 @@ function App() {
   const dropdowns = Object.entries(sections).map(
     ([sectionName, subSections]) => {
       const dialogs = subSections.map((subSection, index) => {
+        console.log(subSection);
         return (
-          <Dialog name={subSection.place} key={subSection.place}>
+          <Dialog name={subSection.place} key={subSection.id}>
             <EditCVSection
               sectionName={sectionName}
               fullSections={sections}
