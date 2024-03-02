@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/dropdown.css";
-import DropdownIndicator from "../assets/dropdown.svg";
+import DropdownIndicator from "../assets/dropdown.svg?react";
 
 export default function Dropdown({ title, children }) {
   const [open, setOpen] = useState(false);

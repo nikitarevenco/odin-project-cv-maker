@@ -4,19 +4,34 @@ import CV from "./CV";
 import { initialInfo, initialSections } from "../data/initial-info";
 import EditCVBasics from "./EditCVBasics";
 import Dropdown from "./Dropdown";
+import Dialog from "./Dialog";
+import EditCVSection from "./EditCVSection";
 
 function App() {
   const [info, setInfo] = useState(initialInfo);
   const [sections, setSections] = useState(initialSections);
-
-  const CVSectionEdit = Object.entries(sections).map((section) => {
-    return <CVSectionTeaser section={section} />;
-  });
+  const dropdowns = Object.entries(sections).map(
+    ([sectionName, subSections]) => {
+      const dialogs = subSections.map((subSection, index) => {
+        return (
+          <Dialog name={subSection.place} key={subSection.place}>
+            <EditCVSection
+              sectionName={sectionName}
+              fullSections={sections}
+              sectionIndexToEdit={index}
+              setSections={setSections}
+            />
+          </Dialog>
+        );
+      });
+      return <Dropdown title={sectionName} key={sectionName}>{dialogs}</Dropdown>;
+    },
+  );
 
   return (
     <>
       <EditCVBasics info={info} setInfo={setInfo} />
-      <Dropdown>{CVSectionEdit}</Dropdown>
+      {dropdowns}
       <CV info={info} sections={sections} />
     </>
   );

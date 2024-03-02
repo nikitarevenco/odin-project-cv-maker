@@ -1,10 +1,29 @@
-import EditCVBasics from './EditCVBasics';
-export default function CVSectionTeaser([sectionName, sectionContent]) {
-  const subSection = Object.entries(sectionContent).map(
-    ([subSectionName, subSectionContent]) => {
-      <EditCVBasics info={} setInfo={}></EditCVBasics>
-    },
-  );
+export default function EditCVSection({
+  sectionName,
+  fullSections,
+  sectionIndexToEdit,
+  setSections,
+}) {
+  const currentSection = fullSections[sectionName][sectionIndexToEdit];
+  const inputs = Object.entries(currentSection).map(([field, value]) => {
+    return (
+      <section key={field}>
+        <p className="input-description">Enter: {field}</p>
+        <input
+          value={value}
+          onChange={(event) => {
 
-  return <button></button>
+            const fieldChanged = fullSections[sectionName].toSpliced(sectionIndexToEdit, 1, { ...currentSection, [field]: event.target.value })
+
+            setSections({
+              ...fullSections,
+              [sectionName]: fieldChanged,
+            });
+          }}
+        />
+      </section>
+    );
+  });
+
+  return <>{inputs}</>;
 }

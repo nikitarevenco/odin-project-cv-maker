@@ -6,7 +6,6 @@ export default function Dialog({ children, name }) {
   function handleClick() {
     setOpen(!open);
   }
-
   return (
     <>
       <button type="button" className="dialog-open" onClick={handleClick}>
