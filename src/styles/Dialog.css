@@ -8,6 +8,10 @@ dialog {
   position: relative;
 }
 
+::backdrop {
+  color: blue;
+}
+
 .dialog-open {
   border-radius: var(--pill-radius);
   display: flex;
