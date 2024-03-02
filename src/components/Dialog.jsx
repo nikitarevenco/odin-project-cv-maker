@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import "../styles/Dialog.css";
 
 export default function Dialog({ children, name }) {
   // const [open, setOpen] = useState(false);
@@ -10,7 +11,6 @@ export default function Dialog({ children, name }) {
   function closeDialog() {
     dialog.current.close();
   }
-
 
   return (
     <>

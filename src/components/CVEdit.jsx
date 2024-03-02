@@ -3,6 +3,8 @@ import Dialog from "./Dialog";
 import Dropdown from "./Dropdown";
 import EditCVBasics from "./EditCVBasics";
 import EditCVSection from "./EditCVSection";
+import "../styles/CVEdit.css";
+import AddDropdownItem from "./AddDropdownItem";
 
 export default function CVEdit({ sections, info, setInfo, setSections }) {
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -22,8 +24,14 @@ export default function CVEdit({ sections, info, setInfo, setSections }) {
         );
       });
       return (
-        <Dropdown title={sectionName} key={sectionName} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
+        <Dropdown
+          title={sectionName}
+          key={sectionName}
+          openDropdown={openDropdown}
+          setOpenDropdown={setOpenDropdown}
+        >
           {dialogs}
+          <AddDropdownItem sectionName={sectionName} fullSections={sections} setSections={setSections}/>
         </Dropdown>
       );
     },
