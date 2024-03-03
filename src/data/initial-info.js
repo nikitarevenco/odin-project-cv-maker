@@ -1,8 +1,20 @@
+const emptyInfo = {
+  name: "",
+  location: "",
+  email: "",
+  phone: "",
+};
+
 const initialInfo = {
   name: "John",
   location: "London, UK",
   email: "john.hasmail@email.com",
   phone: "555-5555-555",
+};
+
+const emptySections = {
+  Education: [],
+  "Professional Experience": [],
 };
 
 const initialSections = {
@@ -15,6 +27,7 @@ const initialSections = {
       period: "08/2020 - present",
       location: "London",
       footnote: "Pursuing Bachelor of Economics",
+      hidden: false,
     },
     {
       id: crypto.randomUUID(),
@@ -24,6 +37,7 @@ const initialSections = {
       period: "01/2019 - 12/2019",
       location: "Online",
       footnote: "Advanced Diploma in Mathematical Foundations",
+      hidden: false,
     },
   ],
   "Professional Experience": [
@@ -35,6 +49,7 @@ const initialSections = {
       period: "04/2018 - 08/2020",
       location: "Brighton",
       footnote: "Lead Educator in Quantum Physics",
+      hidden: false,
     },
     {
       id: crypto.randomUUID(),
@@ -44,6 +59,7 @@ const initialSections = {
       period: "04/2016 - 04/2018",
       location: "Folkestone",
       footnote: "Professional Driver",
+      hidden: false,
     },
     {
       id: crypto.randomUUID(),
@@ -53,8 +69,9 @@ const initialSections = {
       period: "06/2020 - 12/2020",
       location: "Remote",
       footnote: "Internship",
+      hidden: false,
     },
   ],
 };
 
-export { initialInfo, initialSections };
+export { initialInfo, initialSections, emptyInfo, emptySections };
