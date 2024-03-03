@@ -1,6 +1,7 @@
 body {
   display: flex;
   justify-content: center;
+  --cv-color: #112444;
 }
 
 #root {

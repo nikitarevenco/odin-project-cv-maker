@@ -13,7 +13,7 @@
 .section-name {
   font-size: calc(0.025 * var(--cv-width));
   background-color: #eef1f3;
-  color: #0e374e;
+  color: var(--cv-color);
   padding: calc(0.01 * var(--cv-width));
   display: grid;
   place-content: center;

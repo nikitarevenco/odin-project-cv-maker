@@ -7,9 +7,9 @@ import "../styles/CVEdit.css";
 import AddDropdownItem from "./AddDropdownItem";
 import ClearCV from "./ClearCV";
 import LoadDefaults from "./LoadDefaults";
-import exportPDF from "./ExportToPDF";
 import ExportPDF from "./ExportToPDF";
 import ChangeCVFont from "./ChangeCVFont";
+import ColorPicker from "./ColorPicker";
 
 export default function CVEdit({ sections, info, setInfo, setSections }) {
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -61,6 +61,7 @@ export default function CVEdit({ sections, info, setInfo, setSections }) {
       {dropdowns}
       <ExportPDF />
       <ChangeCVFont />
+      <ColorPicker />
     </section>
   );
 }
