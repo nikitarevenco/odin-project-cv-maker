@@ -35,7 +35,7 @@ function CVHeaderItem({ type, text }) {
   }
   return (
     <div>
-      {svgType}
+      {text === '' ? null : svgType}
       <p>{text}</p>
     </div>
   );
