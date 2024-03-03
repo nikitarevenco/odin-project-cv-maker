@@ -5,6 +5,8 @@ import EditCVBasics from "./EditCVBasics";
 import EditCVSection from "./EditCVSection";
 import "../styles/CVEdit.css";
 import AddDropdownItem from "./AddDropdownItem";
+import ClearCV from "./ClearCV";
+import LoadDefaults from "./LoadDefaults";
 
 export default function CVEdit({ sections, info, setInfo, setSections }) {
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -50,6 +52,8 @@ export default function CVEdit({ sections, info, setInfo, setSections }) {
   );
   return (
     <section className="CV-edit">
+      <ClearCV setInfo={setInfo} setSections={setSections} />
+      <LoadDefaults setInfo={setInfo} setSections={setSections} />
       <EditCVBasics info={info} setInfo={setInfo} />
       {dropdowns}
     </section>

@@ -1,8 +1,20 @@
+const emptyInfo = {
+  name: "",
+  location: "",
+  email: "",
+  phone: "",
+};
+
 const initialInfo = {
   name: "John",
   location: "London, UK",
   email: "john.hasmail@email.com",
   phone: "555-5555-555",
+};
+
+const emptySections = {
+  Education: [],
+  "Professional Experience": [],
 };
 
 const initialSections = {
@@ -62,4 +74,4 @@ const initialSections = {
   ],
 };
 
-export { initialInfo, initialSections };
+export { initialInfo, initialSections, emptyInfo, emptySections };
