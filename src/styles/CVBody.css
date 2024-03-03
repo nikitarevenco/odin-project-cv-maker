@@ -1,6 +1,7 @@
 .CVBody {
   color: black;
   padding: calc(0.06 * var(--cv-width));
+  /* grid-area: body; */
 }
 
 .experience {

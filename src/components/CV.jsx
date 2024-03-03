@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import CVBody from "./CVBody";
 import CVHeader from "./CVHeader";
 import "../styles/CV.css";
