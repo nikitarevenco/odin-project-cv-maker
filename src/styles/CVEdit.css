@@ -1,5 +1,9 @@
 .CV-edit {
   background-color: rgb(255, 255, 255);
+  display: grid;
+  gap: 20px;
+  place-content: center;
+  overflow: hidden;
 }
 
 .input-description {
