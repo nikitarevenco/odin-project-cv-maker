@@ -9,6 +9,7 @@ import ClearCV from "./ClearCV";
 import LoadDefaults from "./LoadDefaults";
 import exportPDF from "./ExportToPDF";
 import ExportPDF from "./ExportToPDF";
+import ChangeCVFont from "./ChangeCVFont";
 
 export default function CVEdit({ sections, info, setInfo, setSections }) {
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -59,6 +60,7 @@ export default function CVEdit({ sections, info, setInfo, setSections }) {
       <EditCVBasics info={info} setInfo={setInfo} />
       {dropdowns}
       <ExportPDF />
+      <ChangeCVFont />
     </section>
   );
 }
