@@ -13,7 +13,15 @@ export default function CVEdit({ sections, info, setInfo, setSections }) {
     ([sectionName, subSections]) => {
       const dialogs = subSections.map((subSection, index) => {
         return (
-          <Dialog name={subSection.place} key={subSection.id}>
+          // TODO: Make dialogs be able to remove elements and also dialogs should be able to "hide" elements too
+          <Dialog
+            name={subSection.place}
+            key={subSection.id}
+            fullSections={sections}
+            sectionIndexToEdit={index}
+            setSections={setSections}
+            sectionName={sectionName}
+          >
             <EditCVSection
               sectionName={sectionName}
               fullSections={sections}
@@ -31,7 +39,11 @@ export default function CVEdit({ sections, info, setInfo, setSections }) {
           setOpenDropdown={setOpenDropdown}
         >
           {dialogs}
-          <AddDropdownItem sectionName={sectionName} fullSections={sections} setSections={setSections}/>
+          <AddDropdownItem
+            sectionName={sectionName}
+            fullSections={sections}
+            setSections={setSections}
+          />
         </Dropdown>
       );
     },
